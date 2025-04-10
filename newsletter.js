@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Enviando os dados:", { nome, sobrenome, email });
 
     try {
-      await fetch('https://script.google.com/macros/s/SEU_ID_AQUI/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbw4I7WDK8_s7IipJXFIlpxyeaHZtyFX2QLc6gco70HfIYydMx3D7ydDU1isA4iTYpid/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: formData

@@ -1,0 +1,286 @@
+/* === ESTILO GERAL === */
+body {
+  background-color: #F5F5F5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* === NAVEGAÇÃO === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  margin: 50px 30px 10px;
+  border-radius: 10px;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+/* Links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #879645;
+}
+
+/* === SEÇÃO SOBRE === */
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sobre .texto {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.sobre .imagem {
+  flex: 1 1 500px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sobre .imagem img {
+  border-radius: 20px;
+}
+
+.sobre h1 {
+  margin-top: 0;
+}
+
+.sobre button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #879645;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === BOTÃO VERDE PADRÃO === */
+.btn-verde {
+  background-color: #879645;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top:10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-verde:hover {
+  background-color: #6f7e39;
+}
+
+/* === CARDS === */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre .imagem,
+  .sobre .texto {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+.nossos-projetos {
+  margin-top: 60px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.descricao-projetos {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.william-youtube {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.objetivos-section {
+  position: relative;
+  text-align: center;
+}
+
+.imagem-com-lista {
+  position: relative;
+  display: inline-block;
+}
+
+.lista-sobreposta {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 500px;
+}
+
+.lista-sobreposta li {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  list-style: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.newsletter-section {
+  background-color: #f5f4ef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.newsletter-form input {
+  padding: 16px 20px;
+  border: 2px solid #000;
+  border-radius: 40px;
+  font-size: 16px;
+  min-width: 200px;
+  outline: none;
+  background-color: #f5f4ef;
+}
+
+.subscribe-btn {
+  background-color: #88964a;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #73803f;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+
+.footer {
+  background-color: #879645;
+  margin: 50px 30px 10px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.texto-footer {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+

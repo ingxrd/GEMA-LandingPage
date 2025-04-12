@@ -577,3 +577,159 @@ nav ul li a:hover {
     background-color: var(--verde-escuro); /* Usando a cor de hover do botão principal */
     transform: translateY(-3px);
 }
+
+/* Header e navegação */
+header {
+    background-color: #000;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;  /* Faz o nav-container ocupar todo o espaço disponível */
+    /* justify-content: space-between;  Centraliza o conteúdo do nav-container */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center; /* Move a centralização para aqui */
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Centraliza links dentro do nav */
+    width: 100%; /* Garante que o ul ocupa toda a largura disponível */
+}
+
+nav ul li {
+    margin: 0 15px; /* Alterado para margem igual em ambos os lados */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--verde-claro);
+}
+
+.nav-atual {
+    color: var(--verde-claro);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: white;
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        order: 1;
+    }
+    
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-container.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .social-icons {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    /* Transformação do hamburger para X quando ativo */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        width: 100%;
+    }
+}

@@ -40,3 +40,48 @@
           el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
           observer.observe(el);
       });
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navContainer = document.querySelector('.nav-container');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        // Função para alternar o menu
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            navContainer.classList.toggle('active');
+            document.body.classList.toggle('no-scroll'); // Impede rolagem quando o menu está aberto
+        }
+        
+        // Adicionar evento de clique no botão do menu
+        mobileMenu.addEventListener('click', toggleMenu);
+        
+        // Fechar o menu quando um link é clicado
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+        
+        // Fechar o menu quando o usuário clicar fora dele
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navContainer.contains(event.target);
+            const isClickOnToggle = mobileMenu.contains(event.target);
+            
+            if (navContainer.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+                mobileMenu.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        });
+        
+        // Adicionar estilo para impedir rolagem quando o menu está aberto
+        const style = document.createElement('style');
+        style.textContent = `
+            body.no-scroll {
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    });

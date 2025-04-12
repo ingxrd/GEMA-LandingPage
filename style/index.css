@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cores */
+:root {
+    --verde-escuro: #33401A;
+    --verde-medio: #607D3B;
+    --verde-claro: #95B46A;
+    --bege-claro: #F5F5F0;
+    --cinza-escuro: #333;
+}
+
+/* Header e navegação */
+header {
+    background-color: #000;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 70px; /* Aumentado o tamanho do logo */
+    width: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--verde-claro);
+}
+
+.nav-atual {
+    color: var(--verde-claro);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    color: white;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    background-color: #000;
+    color: white;
+    padding: 0; /* Ajuste o padding conforme necessário */
+    text-align: center;
+    position: relative; /* Importante para posicionar os filhos absolutamente */
+    overflow: hidden;
+    height: 100vh; /* Ou a altura desejada para a seção hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo (pode ajustar) */
+    align-items: center; /* Centraliza horizontalmente o conteúdo (pode ajustar) */
+}
+
+.hero-image-container {
+    position: absolute; /* Posiciona a imagem dentro do .hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Garante que a imagem esteja atrás do texto (inicialmente) */
+}
+
+.hero-image-responsive {
+    display: block;
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: 100%; /* Faz a imagem ocupar toda a altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer (corta se necessário) */
+}
+
+.hero-text-overlay {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; /* Garante que o texto esteja na frente da imagem */
+    /* Adicione outros estilos de texto conforme necessário */
+}
+
+  
+  
+
+/* Sobre Nós */
+.sobre-nos {
+    padding: 70px 5%;
+    background-color: var(--bege-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre-texto {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sobre-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: var(--cinza-escuro);
+}
+
+.sobre-texto p {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.sobre-imagem {
+    width: 45%;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--verde-medio);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-3px);
+}
+
+/* Propósitos */
+.propositos {
+    padding: 30px;
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+}
+
+.propositos h2 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+.propositos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.proposito-item {
+    flex: 1 1 200px;
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.proposito-icone {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 5px;
+}
+
+.proposito-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.proposito-item p {
+    font-size: 1rem;
+}
+
+/* Projetos */
+.projetos {
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--cinza-escuro);
+}
+
+.projetos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projeto-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+}
+
+.projeto-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projeto-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.projeto-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--cinza-escuro);
+}
+
+.projeto-info p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tag-gratuito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-info {
+    width: 45%;
+}
+
+.newsletter-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-newsletter {
+    align-self: flex-start;
+    background-color: var(--verde-claro);
+}
+
+.btn-newsletter:hover {
+    background-color: var(--verde-medio);
+}
+
+    .footer {
+        background-color: #2A3D16;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-left {
+        max-width: 350px;
+    }
+
+    .footer-logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .footer-text {
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .footer-center {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-center h3 {
+        margin-bottom: 10px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        max-width: 400px;
+    }
+
+    .newsletter-title {
+        margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .newsletter-input {
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .newsletter-button {
+        background-color: #8A9A5B;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: fit-content;
+        min-width: 120px;
+    }
+
+    .newsletter-description {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-top: 10px;
+        line-height: 1.4;
+    }
+
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 30px 0;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .sobre-nos, .newsletter {
+        flex-direction: column;
+    }
+
+    .sobre-texto, .sobre-imagem, .newsletter-info, .newsletter-form {
+        width: 100%;
+    }
+
+    .sobre-texto {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .newsletter-info {
+        margin-bottom: 30px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-logo-section, .footer-links, .footer-contact {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .btn-newsletter {
+        align-self: center;
+    }
+}
+
+/* Logo do Header */
+.logo {
+    width: 110px; /* ajuste o tamanho conforme quiser */
+    height: auto;
+}
+
+/* Imagem do planeta Terra */
+.hero-image {
+    display: block;
+    margin: 0 auto;
+    width: 1000px; /* aumenta o tamanho da imagem */
+    max-width: 100%;
+}
+
+/* Ícones da seção Propósitos */
+.proposito-icone {
+    width: 240px; /* aumenta os ícones */
+    height: auto;
+    display: block;
+    margin: 0 auto 0px auto;
+
+}
+
+
+
+/* Seção de Doação e Ajuda */
+.doe-ajude {
+    padding: 70px 5%; /* Usando o mesmo padding das outras seções */
+    background-color: var(--bege-claro); /* Usando uma cor de fundo clara */
+    text-align: center; /* Centralizando o texto */
+}
+
+.doe-container {
+    max-width: 800px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centralizando o container */
+}
+
+.doe-ajude h2 {
+    font-size: 2.5rem; /* Usando o mesmo tamanho de título das outras seções */
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+}
+
+.doe-ajude p {
+    font-size: 1.1rem; /* Usando o mesmo tamanho de parágrafo */
+    margin-bottom: 30px;
+    color: var(--cinza-escuro); /* Ou outra cor se preferir */
+}
+
+.btn-doe {
+    display: inline-block;
+    background-color: var(--verde-medio); /* Usando a cor do botão principal */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-doe:hover {
+    background-color: var(--verde-escuro); /* Usando a cor de hover do botão principal */
+    transform: translateY(-3px);
+}

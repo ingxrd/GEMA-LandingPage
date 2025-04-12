@@ -1,0 +1,113 @@
+/* Estilos para a página Sobre Nós */
+.sobre-cta {
+    background-color: var(--verde-claro);
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 8px;
+}
+
+.sobre-cta strong {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sobre-cta .btn-primary {
+    background-color: var(--verde-escuro);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sobre-cta .btn-primary:hover {
+    background-color: var(--cinza-escuro);
+    transform: translateY(-2px);
+}
+
+.sobre-cta.final-cta {
+    background-color: var(--bege-claro);
+    color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro);
+}
+
+.sobre-cta.final-cta strong {
+    color: var(--verde-escuro);
+}
+
+.sobre-cta.final-cta .btn-secondary {
+    background-color: var(--verde-medio);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sobre-cta.final-cta .btn-secondary:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.sobre-section {
+    padding: 30px 5%;
+    margin-bottom: 40px;
+    background-color: white; /* Fundo branco para o conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-section h3 {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 10px;
+}
+
+.sobre-section p {
+    line-height: 1.7;
+    color: var(--cinza-escuro);
+    margin-bottom: 15px;
+}
+
+.sobre-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sobre-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.sobre-section ul li::before {
+    content: "•"; /* Bullet point */
+    color: var(--verde-medio);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+/* Responsividade (Exemplo básico - ajuste conforme necessário) */
+@media (max-width: 768px) {
+    .sobre-cta strong {
+        font-size: 1.3rem;
+    }
+
+    .sobre-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-section p {
+        font-size: 1rem;
+    }
+}
